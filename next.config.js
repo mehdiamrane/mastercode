@@ -28,6 +28,18 @@ module.exports = withMdxEnhanced({
 
       return config;
     },
+    async redirects() {
+      return [
+        {
+          // added a redirection because trailingSlash automatic redirection breaks the admin page
+          // https://github.com/vercel/next.js/discussions/16416
+          source: '/edit',
+          destination: 'https://app.forestry.io/sites/3klb9bbff-9e2w/',
+          permanent: true,
+        },
+      ];
+    },
   }
+
   /* normal next config */
 );
