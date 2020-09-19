@@ -1,0 +1,32 @@
+{
+  "name": "mastercode",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@mdx-js/loader": "^1.6.17",
+    "babel-plugin-import-glob-array": "^0.2.0",
+    "dayjs": "^1.8.36",
+    "emotion-theming": "^10.0.27",
+    "focus-visible": "^5.1.0",
+    "mdx-prism": "^0.3.1",
+    "next": "9.5.3",
+    "next-mdx-enhanced": "^4.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "remark-autolink-headings": "^6.0.1",
+    "remark-code-titles": "^0.1.1",
+    "remark-slug": "^6.0.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.4.0",
+    "rehype": "^11.0.0"
+  }
+}

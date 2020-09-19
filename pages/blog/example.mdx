@@ -1,0 +1,66 @@
+---
+layout: blog-post
+title: Comment fonctionne useEffect dans React
+summary: Le résumé de l'exemple de l'article de blog super long pour voir comment ça rend.
+publishedAt: 2020-09-16
+tag: react
+image: https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi mi, pulvinar eget volutpat eget, vestibulum id est. Vestibulum ac purus ornare, aliquet ipsum nec, sagittis metus. Suspendisse convallis arcu eget nisl dapibus porttitor. Maecenas tincidunt mi ut velit rhoncus, sed efficitur odio lobortis. Quisque ac metus fermentum, finibus lorem et, scelerisque massa. Suspendisse eu ex risus. Nullam interdum nec odio eget facilisis. Donec aliquam molestie nisl, non dignissim lectus sagittis eget. Mauris vulputate pharetra eros, ac pretium diam venenatis sit amet. In at nulla lorem. Nullam non tellus pellentesque est lacinia iaculis. Sed tortor est, laoreet vel tellus a, sollicitudin ultricies ante. Ut et bibendum nisl. Praesent euismod ut sem sit amet dapibus.
+
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+## Donec egestas orci dictum tortor mollis pretium.
+
+### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
+
+Duis magna tellus, sodales ut sapien at, lobortis rutrum lectus. Sed aliquam nibh vel diam commodo, eu bibendum risus facilisis. In sed nisl et urna iaculis rhoncus eget vitae magna. Praesent vitae tortor nisl. Sed turpis odio, sagittis scelerisque vestibulum ac, rhoncus et libero. Maecenas tristique pretium fermentum. Sed ut tortor at tortor tincidunt ultrices.
+
+Exemple de lien vers [Google](https://www.google.com).
+
+### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
+
+Exemple de liste :
+
+- magna
+- tellus
+- sapien
+
+## Donec egestas orci dictum tortor mollis pretium.
+
+### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
+
+Exemple de code :
+
+```jsx{4-8}:console.log
+const GlobalStyle = ({ children }) => {
+  const { colorMode } = useColorMode();
+
+  return (
+    <>
+      <CSSReset />
+      <Global
+        styles={css`
+          ::selection {
+            background-color: #47a3f3;
+            color: #fefefe;
+          }
+          html {
+            scroll-behavior: smooth;
+          }
+        `}
+      />
+      {children}
+    </>
+  );
+};
+```
+
+Duis magna tellus, sodales ut sapien at, lobortis rutrum lectus. Sed aliquam nibh vel diam commodo, eu bibendum risus facilisis. In sed nisl et urna iaculis rhoncus eget vitae magna. Praesent vitae tortor nisl. Sed turpis odio, sagittis scelerisque vestibulum ac, rhoncus et libero. Maecenas tristique pretium fermentum. Sed ut tortor at tortor tincidunt ultrices.
+
+Exemple de lien vers [Google](https://www.google.com).
+
+## Conclusion
+
+Donec egestas orci dictum tortor mollis pretium. Vestibulum hendrerit fermentum ipsum vel blandit. Vivamus aliquet finibus urna. Nullam sed tellus elementum, tempus felis eu, lobortis risus. Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet. Praesent sodales erat sit amet turpis tristique, vitae iaculis arcu interdum.
