@@ -1,13 +1,17 @@
 ---
 layout: blog-post
-title: Comment fonctionne useEffect dans React
-summary: Le résumé de l'exemple de l'article de blog super long pour voir comment ça rend.
+title: Comment modifier un article avec forestry
+summary: Voyons voir si ça marche... Normalement il y a une image dans l'article!
 publishedAt: 2020-09-16
 tag: react
 image: https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80
----
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi mi, pulvinar eget volutpat eget, vestibulum id est. Vestibulum ac purus ornare, aliquet ipsum nec, sagittis metus. Suspendisse convallis arcu eget nisl dapibus porttitor. Maecenas tincidunt mi ut velit rhoncus, sed efficitur odio lobortis. Quisque ac metus fermentum, finibus lorem et, scelerisque massa. Suspendisse eu ex risus. Nullam interdum nec odio eget facilisis. Donec aliquam molestie nisl, non dignissim lectus sagittis eget. Mauris vulputate pharetra eros, ac pretium diam venenatis sit amet. In at nulla lorem. Nullam non tellus pellentesque est lacinia iaculis. Sed tortor est, laoreet vel tellus a, sollicitudin ultricies ante. Ut et bibendum nisl. Praesent euismod ut sem sit amet dapibus.
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi mi, pulvinar eget volutpat eget, vestibulum id est. Vestibulum ac purus ornare, aliquet ipsum nec, sagittis metus. Suspendisse convallis arcu eget nisl dapibus porttitor. Maecenas tincidunt mi ut velit rhoncus, sed efficitur odio lobortis.
+
+![](/public/images/linkedin-cover.png)
+
+Quisque ac metus fermentum, finibus lorem et, scelerisque massa. Suspendisse eu ex risus. Nullam interdum nec odio eget facilisis. Donec aliquam molestie nisl, non dignissim lectus sagittis eget. Mauris vulputate pharetra eros, ac pretium diam venenatis sit amet. In at nulla lorem. Nullam non tellus pellentesque est lacinia iaculis. Sed tortor est, laoreet vel tellus a, sollicitudin ultricies ante. Ut et bibendum nisl. Praesent euismod ut sem sit amet dapibus.
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -15,7 +19,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi mi, pulvinar e
 
 ### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
 
-Duis magna tellus, sodales ut sapien at, lobortis rutrum lectus. Sed aliquam nibh vel diam commodo, eu bibendum risus facilisis. In sed nisl et urna iaculis rhoncus eget vitae magna. Praesent vitae tortor nisl. Sed turpis odio, sagittis scelerisque vestibulum ac, rhoncus et libero. Maecenas tristique pretium fermentum. Sed ut tortor at tortor tincidunt ultrices.
+Duis magna tellus, sodales ut sapien at, lobortis rutrum lectus. Sed aliquam nibh vel diam commodo, eu bibendum risus facilisis. In sed nisl et urna iaculis rhoncus eget vitae magna. Praesent vitae tortor nisl.
+
+> New block quote too !
+
+```jsx:Button.js
+<Button>Hey there</Button>
+```
+
+Sed turpis odio, sagittis scelerisque vestibulum ac, rhoncus et libero. Maecenas tristique pretium fermentum. Sed ut tortor at tortor tincidunt ultrices.
 
 Exemple de lien vers [Google](https://www.google.com).
 
@@ -23,9 +35,9 @@ Exemple de lien vers [Google](https://www.google.com).
 
 Exemple de liste :
 
-- magna
-- tellus
-- sapien
+* magna
+* tellus
+* sapien
 
 ## Donec egestas orci dictum tortor mollis pretium.
 
@@ -33,7 +45,7 @@ Exemple de liste :
 
 Exemple de code :
 
-```jsx{4-8}:console.log
+```jsx{8-10}:GlobalStyle.js
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
 
