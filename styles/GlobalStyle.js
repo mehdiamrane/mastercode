@@ -23,6 +23,7 @@ const GlobalStyle = ({ children }) => {
           }
 
           #__next {
+            min-height: 100vh;
             background: ${colorMode === 'light' ? theme.colors.gray[50] : theme.colors.gray[800]};
           }
 
