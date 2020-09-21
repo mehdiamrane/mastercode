@@ -1,78 +1,42 @@
 ---
 layout: blog-post
-title: Comment modifier un article avec forestry avec une image !
-summary: Voyons voir si ça marche... Normalement il y a une image dans l'article!
-publishedAt: 2020-09-16
-tag: react
-image: https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80
+title: Indenter automatiquement son code avec Prettier sur Visual Studio Code
+summary: Rendez votre code beau automatiquement avec Prettier.
+publishedAt: 2020-09-21T10:00:00+02:00
+tag: []
+image: ''
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi mi, pulvinar eget volutpat eget, vestibulum id est. Vestibulum ac purus ornare, aliquet ipsum nec, sagittis metus. Suspendisse convallis arcu eget nisl dapibus porttitor. Maecenas tincidunt mi ut velit rhoncus, sed efficitur odio lobortis.
+Prettier est un formateur de code dit "opinionated". Il applique un style cohérent en analysant votre code et en le réimprimant avec ses propres règles qui tiennent compte de la longueur maximale des lignes, en enveloppant le code si nécessaire. Entre autre, Prettier permet d'indenter automatiquement votre code lorsque vous sauvegardez.
 
-![](/images/linkedin-cover.png)
+# Installation
 
-Quisque ac metus fermentum, finibus lorem et, scelerisque massa. Suspendisse eu ex risus. Nullam interdum nec odio eget facilisis. Donec aliquam molestie nisl, non dignissim lectus sagittis eget. Mauris vulputate pharetra eros, ac pretium diam venenatis sit amet. In at nulla lorem. Nullam non tellus pellentesque est lacinia iaculis. Sed tortor est, laoreet vel tellus a, sollicitudin ultricies ante. Ut et bibendum nisl. Praesent euismod ut sem sit amet dapibus.
+Recherchez Prettier sur la marketplace de VS Code ou cliquez directement sur [ce lien](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode "Prettier sur VS Code"). Cliquez ensuite sur installer.
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+![Prettier VScode marketplace](/images/prettier-vscode-marketplace.png "Prettier VScode marketplace")
 
-## Donec egestas orci dictum tortor mollis pretium.
+# Format on save
 
-### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
+Par défaut, Prettier ne formatte pas automatiquement votre code quand vous sauvegardez. Pour activer cette option, rendez-vous dans les paramètres de VS Code (molette en bas à gauche) puis sur "_settings_".
 
-Duis magna tellus, sodales ut sapien at, lobortis rutrum lectus. Sed aliquam nibh vel diam commodo, eu bibendum risus facilisis. In sed nisl et urna iaculis rhoncus eget vitae magna. Praesent vitae tortor nisl.
+Recherchez "_format on save_" et cochez la case "_Format a file on save_".
 
-> New block quote too !
+![Prettier Format on save](/images/prettier-format-on-save.png "Prettier Format on save")Retournez dans votre code, et sauvegardez (<kbd>Command + S</kbd>. Normalement, votre code s'indente automatiquement selon les règles définies dans Prettier !
 
-```jsx:Button.js
-<Button>Hey there</Button>
-```
+> **Attention**, si vous sauvegardez le code d'un collègue qui n'a pas la même configuration que vous, le fait de sauvegarder comptera comme une modification sur git. Pour savoir comment sauvegarder sans formater automatiquement, afficher la palette de commandes de VS code en tapant <kbd>Command + Shift + P</kbd>, et cherchez "_Save without formatting_" pour trouver le raccourci clavier.
 
-Sed turpis odio, sagittis scelerisque vestibulum ac, rhoncus et libero. Maecenas tristique pretium fermentum. Sed ut tortor at tortor tincidunt ultrices.
+![Prettier save without formatting](/images/prettier-save-without-formatting.png "Prettier save without formatting")
 
-Exemple de lien vers [Google](https://www.google.com).
+# Autres configurations
 
-### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
+Vous pouvez configurer les différentes règles de Prettier en vous rendant dans les paramètres et en tappant simplement "_Prettier_". 
 
-Exemple de liste :
+![](/images/parametres-prettier.png)
 
-* magna
-* tellus
-* sapien
+Parmis les différents paramètres, ceux qui peuvent vous intéresser sont :
 
-## Donec egestas orci dictum tortor mollis pretium.
-
-### Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet.
-
-Exemple de code :
-
-```jsx{8-10}:GlobalStyle.js
-const GlobalStyle = ({ children }) => {
-  const { colorMode } = useColorMode();
-
-  return (
-    <>
-      <CSSReset />
-      <Global
-        styles={css`
-          ::selection {
-            background-color: #47a3f3;
-            color: #fefefe;
-          }
-          html {
-            scroll-behavior: smooth;
-          }
-        `}
-      />
-      {children}
-    </>
-  );
-};
-```
-
-Duis magna tellus, sodales ut sapien at, lobortis rutrum lectus. Sed aliquam nibh vel diam commodo, eu bibendum risus facilisis. In sed nisl et urna iaculis rhoncus eget vitae magna. Praesent vitae tortor nisl. Sed turpis odio, sagittis scelerisque vestibulum ac, rhoncus et libero. Maecenas tristique pretium fermentum. Sed ut tortor at tortor tincidunt ultrices.
-
-Exemple de lien vers [Google](https://www.google.com).
-
-## Conclusion
-
-Donec egestas orci dictum tortor mollis pretium. Vestibulum hendrerit fermentum ipsum vel blandit. Vivamus aliquet finibus urna. Nullam sed tellus elementum, tempus felis eu, lobortis risus. Aenean feugiat enim leo, eget placerat eros ullamcorper laoreet. Praesent sodales erat sit amet turpis tristique, vitae iaculis arcu interdum.
+* "_Print Width_", la longueur maximale d'une ligne avant que Prettier la divise en plusieurs lignes; 
+* "_Single Quote_", si vous préférez utiliser des singles quotes plutôt que des doubles quotes ( ' vs " );
+* "_Semi_", pour ajouter un point virgule automatiquement à la fin de chaque ligne;
+* "_Tab width_", configuré à 2 espaces personnellement;
+* "_Use Tabs_", qui est décoché personnellement. Même si j'appuie sur la touche tab pour indenter mon code manuellement, je préfère que Prettier remplace tout par des espaces pour que le code s'affiche mieux sur GitHub.
