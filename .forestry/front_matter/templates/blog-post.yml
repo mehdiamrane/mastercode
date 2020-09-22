@@ -21,3 +21,5 @@ fields:
 - type: textarea
   name: image
   label: image
+pages:
+- pages/blog/ressources.mdx
