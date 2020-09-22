@@ -3,18 +3,17 @@ layout: blog-post
 title: Indenter automatiquement son code avec Prettier sur Visual Studio Code
 summary: Rendez votre code lisible et propre automatiquement avec Prettier.
 publishedAt: 2020-09-21T10:00:00.000+02:00
-tag:
-- vscode
+tag: vscode
 image: ''
-
 ---
+
 Prettier est un formateur de code dit "opinionated". Il applique un style cohérent en analysant votre code et en le réimprimant avec ses propres règles qui tiennent compte de la longueur maximale des lignes, en enveloppant le code si nécessaire. Entre autre, Prettier permet d'indenter automatiquement votre code lorsque vous sauvegardez.
 
 # Installation
 
-Recherchez Prettier sur la marketplace de VS Code ou cliquez directement sur [ce lien](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode "Prettier sur VS Code"). Cliquez ensuite sur installer.
+Recherchez Prettier sur la marketplace de VS Code ou cliquez directement sur [ce lien](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode 'Prettier sur VS Code'). Cliquez ensuite sur installer.
 
-![Prettier VScode marketplace](/images/prettier-vscode-marketplace.png "Prettier VScode marketplace")
+![Prettier VScode marketplace](/images/prettier-vscode-marketplace.png 'Prettier VScode marketplace')
 
 # Format on save
 
@@ -22,24 +21,24 @@ Par défaut, Prettier ne formatte pas automatiquement votre code quand vous sauv
 
 Recherchez "_format on save_" et cochez la case "_Format a file on save_".
 
-![Prettier Format on save](/images/prettier-format-on-save.png "Prettier Format on save")
+![Prettier Format on save](/images/prettier-format-on-save.png 'Prettier Format on save')
 
 Retournez dans votre code, et sauvegardez (<kbd>Command + S</kbd>). Normalement, votre code s'indente automatiquement selon les règles définies dans Prettier !
 
 > **Attention**, si vous sauvegardez le code d'un collègue qui n'a pas la même configuration que vous, le fait de sauvegarder comptera comme une modification sur git. Pour savoir comment sauvegarder sans formater automatiquement, afficher la palette de commandes de VS code en tapant <kbd>Command + Shift + P</kbd>, et cherchez "_Save without formatting_" pour trouver le raccourci clavier.
 
-![Prettier save without formatting](/images/prettier-save-without-formatting.png "Prettier save without formatting")
+![Prettier save without formatting](/images/prettier-save-without-formatting.png 'Prettier save without formatting')
 
 # Autres configurations
 
-Vous pouvez configurer les différentes règles de Prettier en vous rendant dans les paramètres et en tappant simplement "_Prettier_". 
+Vous pouvez configurer les différentes règles de Prettier en vous rendant dans les paramètres et en tappant simplement "_Prettier_".
 
 ![](/images/parametres-prettier.png)
 
 Parmis les différents paramètres, ceux qui peuvent vous intéresser sont :
 
-* "_Print Width_", la longueur maximale d'une ligne avant que Prettier la divise en plusieurs lignes; 
-* "_Single Quote_", si vous préférez utiliser des singles quotes plutôt que des doubles quotes ( ' vs " );
-* "_Semi_", pour ajouter un point virgule automatiquement à la fin de chaque ligne;
-* "_Tab width_", configuré à 2 espaces personnellement;
-* "_Use Tabs_", qui est décoché personnellement. Même si j'appuie sur la touche tab pour indenter mon code manuellement, je préfère que Prettier remplace tout par des espaces pour que le code s'affiche mieux sur GitHub.
+- "_Print Width_", la longueur maximale d'une ligne avant que Prettier la divise en plusieurs lignes;
+- "_Single Quote_", si vous préférez utiliser des singles quotes plutôt que des doubles quotes ( ' vs " );
+- "_Semi_", pour ajouter un point virgule automatiquement à la fin de chaque ligne;
+- "_Tab width_", configuré à 2 espaces personnellement;
+- "_Use Tabs_", qui est décoché personnellement. Même si j'appuie sur la touche tab pour indenter mon code manuellement, je préfère que Prettier remplace tout par des espaces pour que le code s'affiche mieux sur GitHub.
