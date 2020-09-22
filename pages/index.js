@@ -10,7 +10,7 @@ import {
   Icon,
   Heading,
   Stack,
-  Button,
+  Text,
 } from '@chakra-ui/core';
 import NavBar from 'components/NavBar';
 import Footer from 'components/Footer';
@@ -68,10 +68,11 @@ const Home = () => {
       >
         <Box>
           <Heading as='h1' size='xl' textAlign='center' fontWeight='light'>
-            Guides pour développeurs,
-            <br />
-            in French please.
+            Ressources pour développeurs
           </Heading>
+          <Text textAlign='center' color='gray.500' mt='4'>
+            Articles, guides et ressources pour mieux créer sur le web.
+          </Text>
         </Box>
 
         <InputGroup my='12' mx='auto'>
@@ -100,18 +101,19 @@ const Home = () => {
         </Heading>
 
         <Stack spacing='4' shouldWrapChildren>
-          {displayedArticles.map((article, i) => {
-            {
-              console.log('hey');
-            }
-            return (
-              <BlogCard
-                key={article.__resourcePath}
-                href={formatPath(article.__resourcePath)}
-                article={article}
-              />
-            );
-          })}
+          {displayedArticles
+            .sort(function (a, b) {
+              return new Date(b.publishedAt) - new Date(a.publishedAt);
+            })
+            .map((article, i) => {
+              return (
+                <BlogCard
+                  key={article.__resourcePath}
+                  href={formatPath(article.__resourcePath)}
+                  article={article}
+                />
+              );
+            })}
           {displayedArticles.length === 0 && <NothingFound thing='article' />}
         </Stack>
       </Box>
