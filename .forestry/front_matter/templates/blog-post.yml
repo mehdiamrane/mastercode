@@ -22,4 +22,5 @@ fields:
   name: image
   label: image
 pages:
+- pages/blog/icones.mdx
 - pages/blog/ressources.mdx
